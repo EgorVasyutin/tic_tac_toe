@@ -44,7 +44,7 @@ body {
 
 }
 
-.counter {
+.fields {
     width: 600px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
