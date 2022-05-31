@@ -1,0 +1,120 @@
+:root {
+    --color-main: #14bdac;
+    --color-cross: rgb(84, 84, 84);
+    --color-circle: rgb(242, 235, 211);
+    --color-win: rgb(255, 100, 100);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+body {
+    background-color: var(--color-main);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.tic_tac_toe {
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 100px;
+
+}
+
+.win {
+
+}
+.counter_w-f {
+    text-align: center;
+}
+.text  {
+    font-size: 30px;
+    color: white;
+
+}
+
+.counter {
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.field {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.field_1 {
+    box-shadow: 2px 2px 1px 0 black;
+}
+.field_2 {
+    box-shadow: 2px 2px 1px 0 black;
+}
+.field_3 {
+    box-shadow: 0 2px 0 0 black;
+}
+.field_4 {
+    box-shadow: 2px 2px 0 0 black;
+}
+.field_5 {
+    box-shadow: 2px 2px 0 0 black;
+}
+.field_6 {
+    box-shadow: 0 2px 0 0 black;
+}
+.field_7 {
+    box-shadow: 2px 0 0 0 black;
+}
+.field_8 {
+    box-shadow: 2px 0 0 0 black;
+}
+
+
+.go-game {
+    width: 500px;
+    height: 70px;
+    color: black;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+}
+.go-game:hover {
+    opacity: 0.8;
+    cursor: pointer;
+
+}
+.go-game:active {
+    box-shadow: 2px 2px 2px white;
+}
+.field:hover {
+    cursor: pointer;
+}
+
+/*Крестик*/
+.x {position: absolute; top: 97px; left: 77px;}
+.x:before {content: ''; position: absolute; width: 54px; height: 6px; background: gray;}
+.x:after {content: ''; position: absolute; width: 54px; height: 6px; background: gray;}
+.x:before {transform: rotate(45deg);}
+.x:after {transform: rotate(-45deg);}
+/*Нолик*/
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: gray;
+}
