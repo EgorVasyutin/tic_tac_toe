@@ -54,11 +54,13 @@ function winnerCheck() {
 
 let btm = document.querySelector('.go-game')
 function clear() {
-    for (let i = 0; i < allField; i++) {
-         allField[i].innerHTML = ''
-    }
+     for (let i = 0; i < allField.length; i++) {
+          allField[i].innerHTML = ''
+     }
+    step = 0
 }
 btm.onclick = clear
+
 
 
 
