@@ -2,6 +2,10 @@ const fields = document.querySelector('.fields')
 const crossHTML =  '<div class="x"></div>'
 const zeroHTML = '<div class="circle"></div>'
 let step = 0
+let crossesWin = 0
+let zeroesWin = 0
+let drawWin = 0
+let hod = 0
 
 function ticTacToe(event) {
     if(event.target.classList.contains('field')){
@@ -13,6 +17,9 @@ function ticTacToe(event) {
         step++
     }
     winnerCheck()
+    draw.innerHTML = drawWin
+    crosses.innerHTML = crossesWin
+    zeroes.innerHTML = zeroesWin
 }
 fields.onclick = ticTacToe
 
@@ -35,6 +42,7 @@ function getIsCrossesWin() {
                 allField[winCombination[1]].innerHTML === crossHTML &&
                 allField[winCombination[2]].innerHTML === crossHTML
     })
+
 }
 
 function getIsZeroesWin() {
@@ -48,9 +56,29 @@ function getIsZeroesWin() {
 function winnerCheck() {
     const textCrosses = 'Победили крестики'
     const textZeroes = 'Победили нолики'
-    if(getIsCrossesWin()) alert(textCrosses)
-    else if(getIsZeroesWin()) alert(textZeroes)
+    const textDraw = 'Ничья'
+    if(getIsCrossesWin()){
+        alert(textCrosses)
+        crossesWin++
+    }
+    else if (getIsZeroesWin()){
+        alert(textZeroes)
+        zeroesWin++
+    }
+    else if(!getIsZeroesWin() && !getIsZeroesWin()){
+        hod++
+    }
+    if(hod === 9){
+        alert(textDraw)
+        drawWin++
+    }
 }
+
+const crosses = document.querySelector('.Crosses_win')
+const zeroes = document.querySelector('.Zeroes_win')
+const draw = document.querySelector('.draw')
+
+
 
 let btm = document.querySelector('.go-game')
 function clear() {
@@ -58,6 +86,7 @@ function clear() {
           allField[i].innerHTML = ''
      }
     step = 0
+    hod = 0
 }
 btm.onclick = clear
 
