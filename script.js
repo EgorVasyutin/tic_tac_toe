@@ -6,13 +6,15 @@ let crossesWin = 0
 let zeroesWin = 0
 let drawWin = 0
 let hod = 0
-
+const hodXOrO = document.querySelector('.hodXOrO')
 function ticTacToe(event) {
     if(event.target.classList.contains('field')){
         if(step % 2 === 0){
             event.target.innerHTML = crossHTML
+            hodXOrO.innerHTML = 'O'
         }else {
             event.target.innerHTML = zeroHTML
+            hodXOrO.innerHTML = 'X'
         }
         step++
     }
@@ -38,18 +40,32 @@ const allField = document.getElementsByClassName('field')
 
 function getIsCrossesWin() {
     return winCombinations.some((winCombination)=> {
-        return  allField[winCombination[0]].innerHTML === crossHTML &&
-                allField[winCombination[1]].innerHTML === crossHTML &&
-                allField[winCombination[2]].innerHTML === crossHTML
+        if ( allField[winCombination[0]].innerHTML === crossHTML &&
+            allField[winCombination[1]].innerHTML === crossHTML &&
+            allField[winCombination[2]].innerHTML === crossHTML) {
+            allField[winCombination[0]].style.backgroundColor = 'red'
+            allField[winCombination[1]].style.backgroundColor = 'red'
+            allField[winCombination[2]].style.backgroundColor = 'red'
+        }
+        return allField[winCombination[0]].innerHTML === crossHTML &&
+               allField[winCombination[1]].innerHTML === crossHTML &&
+               allField[winCombination[2]].innerHTML === crossHTML
     })
 
 }
 
 function getIsZeroesWin() {
     return winCombinations.some((winCombination)=> {
-        return  allField[winCombination[0]].innerHTML === zeroHTML &&
+        if( allField[winCombination[0]].innerHTML === zeroHTML &&
             allField[winCombination[1]].innerHTML === zeroHTML &&
-            allField[winCombination[2]].innerHTML === zeroHTML
+            allField[winCombination[2]].innerHTML === zeroHTML){
+            allField[winCombination[0]].style.backgroundColor = 'red'
+            allField[winCombination[1]].style.backgroundColor = 'red'
+            allField[winCombination[2]].style.backgroundColor = 'red'
+        }
+        return allField[winCombination[0]].innerHTML === zeroHTML &&
+               allField[winCombination[1]].innerHTML === zeroHTML &&
+               allField[winCombination[2]].innerHTML === zeroHTML
     })
 }
 
@@ -87,6 +103,7 @@ function clear() {
      }
     step = 0
     hod = 0
+    hodXOrO.innerHTML = 'X'
 }
 btm.onclick = clear
 

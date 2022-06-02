@@ -5,7 +5,6 @@
     --color-win: rgb(255, 100, 100);
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -24,16 +23,17 @@ body {
 }
 
 .tic_tac_toe {
+    width: 100vw;
+}
+
+.counter_w-f {
+    align-items: center;
+}
+.tic_tac_toe__container {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     gap: 100px;
-
-}
-
-
-.counter_w-f {
-    align-items: center;
 }
 
 .text  {
@@ -45,6 +45,12 @@ body {
     color: white;
     margin-top: 20px;
 
+}
+.text-hod {
+    font-size: 45px;
+    color: white;
+    margin: 50px 0 0 200px;
+    position: absolute;
 }
 
 .fields {
