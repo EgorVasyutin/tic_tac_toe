@@ -15,6 +15,21 @@
 body {
     background-color: var(--color-main);
     font-family: 'Courier New', Courier, monospace;
+}
+.page {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.tic_tac_toe {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -22,8 +37,16 @@ body {
     gap: 100px;
 }
 
-.tic_tac_toe {
-    width: 100vw;
+.who_win {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 45px;
+    color: white;
+    margin-top: 20px;
+    height: 40px;
+    visibility: hidden;
 }
 
 .counter_w-f {
@@ -49,8 +72,10 @@ body {
 .text-hod {
     font-size: 45px;
     color: white;
-    margin: 50px 0 0 200px;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
 }
 
 .fields {

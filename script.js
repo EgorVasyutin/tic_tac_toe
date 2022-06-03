@@ -69,17 +69,23 @@ function getIsZeroesWin() {
     })
 }
 
+const strWin = document.querySelector('.who_win')
 function winnerCheck() {
     const textCrosses = 'Победили крестики'
     const textZeroes = 'Победили нолики'
     const textDraw = 'Ничья'
+
     if(getIsCrossesWin()){
         alert(textCrosses)
         crossesWin++
+        strWin.innerHTML = 'Crosses win'
+        strWin.style.visibility =  'visible'
     }
     else if (getIsZeroesWin()){
         alert(textZeroes)
         zeroesWin++
+        strWin.innerHTML = 'Zeroes win'
+        strWin.style.visibility =  'visible'
     }
     else if(!getIsZeroesWin() && !getIsZeroesWin()){
         hod++
@@ -87,6 +93,8 @@ function winnerCheck() {
     if(hod === 9){
         alert(textDraw)
         drawWin++
+        strWin.innerHTML = 'Draw'
+        strWin.style.visibility =  'visible'
     }
 }
 
@@ -104,6 +112,7 @@ function clear() {
     step = 0
     hod = 0
     hodXOrO.innerHTML = 'X'
+    strWin.style.visibility = 'hidden'
 }
 btm.onclick = clear
 

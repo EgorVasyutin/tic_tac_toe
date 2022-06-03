@@ -6,40 +6,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="tic_tac_toe">
+    <div class="page">
         <div class="text-hod">
             Ходят:<span class="text hodXOrO">X</span>
         </div>
-        <div class="tic_tac_toe__container">
-            <div class="text">
-                <span>Win X</span>
-                <div class="Crosses_win counter_w-f">0</div>
-            </div>
-            <div class="text">
-                <span>Win O</span>
-                <div class="Zeroes_win counter_w-f">0</div>
-            </div>
-            <div class="text">
-                <span>Draw</span>
-                <div class="draw counter_w-f">0</div>
+        <div class="tic_tac_toe">
+            <div class="container" >
+                <div class="tic_tac_toe__container">
+                    <div class="text">
+                        <span>Win X</span>
+                        <div class="Crosses_win counter_w-f">0</div>
+                    </div>
+                    <div class="text">
+                        <span>Win O</span>
+                        <div class="Zeroes_win counter_w-f">0</div>
+                    </div>
+                    <div class="text">
+                        <span>Draw</span>
+                        <div class="draw counter_w-f">0</div>
+                    </div>
+                </div>
+
+                <div class="who_win"></div>
+
+                <div class="fields">
+                    <div class="field field_1"></div>
+                    <div class="field field_2"></div>
+                    <div class="field field_3"></div>
+
+                    <div class="field field_4"></div>
+                    <div class="field field_5"></div>
+                    <div class="field field_6"></div>
+
+                    <div class="field field_7"></div>
+                    <div class="field field_8"></div>
+                    <div class="field field_9"></div>
+                </div>
+
+                <button class="go-game">Начать заново</button>
             </div>
         </div>
-
     </div>
-    <div class="fields">
-        <div class="field field_1"></div>
-        <div class="field field_2"></div>
-        <div class="field field_3"></div>
-
-        <div class="field field_4"></div>
-        <div class="field field_5"></div>
-        <div class="field field_6"></div>
-
-        <div class="field field_7"></div>
-        <div class="field field_8"></div>
-        <div class="field field_9"></div>
-    </div>
-<button class="go-game">Начать заново</button>
 <script src="script.js"></script>
 </body>
 </html>
