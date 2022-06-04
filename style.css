@@ -145,6 +145,12 @@ body {
 .x:after {content: ''; position: absolute; width: 54px; height: 6px; background: gray;}
 .x:before {transform: rotate(45deg);}
 .x:after {transform: rotate(-45deg);}
+
+.x2 {position: absolute; top: 97px; left: 77px;}
+.x2:before {content: ''; position: absolute; width: 54px; height: 6px; background: red;}
+.x2:after {content: ''; position: absolute; width: 54px; height: 6px; background: red;}
+.x2:before {transform: rotate(45deg);}
+.x2:after {transform: rotate(-45deg);}
 /*Нолик*/
 .circle {
     width: 50px;
