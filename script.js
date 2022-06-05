@@ -23,6 +23,9 @@ function ticTacToe(event) {
         }
     }
     winnerCheck()
+    crosses.innerHTML = crossesWin
+    zeroes.innerHTML = zeroesWin
+    draw.innerHTML = drawWin
 }
 
 
@@ -91,6 +94,7 @@ function winnerCheck() {
         getBacklightCrosses()
         alert(textCrosses)
         crossesWin++
+        console.log(crossesWin)
         strWin.innerHTML = 'Crosses win'
         strWin.style.visibility =  'visible'
         isGameOver = true
@@ -130,6 +134,7 @@ function clear() {
     hod = 0
     hodXOrO.innerHTML = 'X'
     strWin.style.visibility = 'hidden'
+    isGameOver = false
 }
 btm.onclick = clear
 
